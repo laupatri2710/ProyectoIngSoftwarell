@@ -119,9 +119,9 @@ public class TerceroDao implements Serializable {
 
         List<Tercero> lstTerceros = new TerceroDao().consultarTercero("");
         if(lstTerceros!=null && lstTerceros.isEmpty()==false){
-            for (Tercero tercero : lstTerceros) {
+            lstTerceros.stream().forEach((tercero) -> {
                 System.out.println("C.C: "+tercero.getNumIdentificacion()+"   Nombre completo: "+tercero.getNombres().trim()+" "+tercero.getApellidos().trim());
-            }
+            });
         }
     }
 }
