@@ -81,12 +81,12 @@ public class TerceroDao implements Serializable {
     /**
      * Metodo que consulta datos un Objeto Tercero
      *
-     * @param idTercero: identificador por el cual se consulta
+     * @param numIdentificacion: identificador por el cual se consulta
      * @return Objeto Tercero
      * @throws Exception
      */
-    public Tercero consultaTercero(int idTercero) throws Exception {
-        return em.find(Tercero.class, idTercero);
+    public Tercero consultaTercero(long numIdentificacion) throws Exception {
+        return em.find(Tercero.class, numIdentificacion);
     }
 
     /**
