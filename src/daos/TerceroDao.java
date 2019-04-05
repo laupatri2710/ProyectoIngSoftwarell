@@ -93,9 +93,6 @@ public class TerceroDao implements Serializable {
      * Metodo que consulta las terceros en base de datos, filtrando por una
      * consulta y Lista de parametros y con un inicio y rango definido
      *
-     * @param inicio: valor int que indica el inicio de los registros a
-     * consultar
-     * @param rango: valor int que indica la cantidad de registros a consultar
      * @param consulta: String que contiene la consulta a realizar
      * @return List< Tercero > :Lista de terceros consultado
      * @throws java.lang.Exception
@@ -114,10 +111,10 @@ public class TerceroDao implements Serializable {
 
     public static void main(String arg[]) throws Exception {
         Tercero t = new Tercero();
-        t.setApellidos("Fulano");
+        t.setApellidos("Rojas");
         t.setClave("123456");
-        t.setNombres("Fulano");
-        t.setNumIdentificacion((long) 1234567);
+        t.setNombres("Laura");
+        t.setNumIdentificacion((long) 23484321);
         new TerceroDao().modificarTercero(null, t);
 
         List<Tercero> lstTerceros = new TerceroDao().consultarTercero("");
@@ -126,7 +123,5 @@ public class TerceroDao implements Serializable {
                 System.out.println("C.C: "+tercero.getNumIdentificacion()+"   Nombre completo: "+tercero.getNombres().trim()+" "+tercero.getApellidos().trim());
             }
         }
-
     }
-
 }
